@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
-import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css';
+import React, { useState, useEffect, useRef } from "react";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
 
 const Editor = ({ content, setContent }) => {
   const [value, setValue] = useState(content);
@@ -27,17 +27,19 @@ const Editor = ({ content, setContent }) => {
         onChange={handleOnChange}
         modules={{
           toolbar: [
-            [{ 'header': [1, 2, 3, false] }],
-            ['bold', 'italic', 'underline', 'strike'],
-            ['blockquote', 'code-block'],
-            [{ 'list': 'ordered' }, { 'list': 'bullet' }],
-            [{ 'script': 'sub' }, { 'script': 'super' }],
-            [{ 'indent': '-1' }, { 'indent': '+1' }],
-            [{ 'direction': 'rtl' }],
-            [{ 'size': ['small', false, 'large', 'huge'] }],
-            [{ 'color': [] }, { 'background': [] }],
-            [{ 'font': [] }],
-            ['image', 'clean'],
+            [{ header: [1, 2, 3, false] }],
+            ["bold", "italic", "underline", "strike"],
+            ["blockquote", "code-block"],
+            [{ list: "ordered" }, { list: "bullet" }],
+            [{ script: "sub" }, { script: "super" }],
+            [{ indent: "-1" }, { indent: "+1" }],
+            [{ direction: "rtl" }],
+            [{ size: ["small", false, "large", "huge"] }],
+            [{ color: [] }, { background: [] }],
+            [{ font: [] }],
+            ["image", "link", "formula", "clean"],
+            [{ align: [] }],
+            ["undo", "redo"],
           ],
         }}
         placeholder="Write something here..."
